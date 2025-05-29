@@ -1,0 +1,98 @@
+# a
+nums = list(map(int, input().split()))
+print(sum(nums))
+
+# b
+nums = list(map(int, input().split()))
+print(max(nums))
+
+# c
+nums = list(map(int, input().split()))
+print(min(nums))
+
+# d
+nums = list(map(int, input().split()))
+print(sum(nums) / len(nums))
+
+# e
+nums = list(map(int, input().split()))
+pares = 0
+for n in nums:
+    if n % 2 == 0:
+        pares += 1
+print(pares)
+
+# f
+import random
+secreto = random.randint(1, 100)
+n = int(input())
+while n != secreto:
+    if n < secreto:
+        print("Más alto")
+    else:
+        print("Más bajo")
+    n = int(input())
+print("¡Ganaste!")
+
+# g
+import random
+opciones = ["piedra", "papel", "tijeras"]
+jugador = input()
+computadora = random.choice(opciones)
+print("Computadora:", computadora)
+if jugador == computadora:
+    print("Empate")
+elif (jugador == "piedra" and computadora == "tijeras") or (jugador == "papel" and computadora == "piedra") or (jugador == "tijeras" and computadora == "papel"):
+    print("Ganaste")
+else:
+    print("Perdiste")
+
+# h
+import random
+palabras = ["python", "codigo", "algoritmo"]
+palabra = random.choice(palabras)
+oculta = ["_" for _ in palabra]
+while "_" in oculta:
+    for i in range(len(palabra)):
+        print(oculta[i], end=" ")
+    print()
+    letra = input()
+    acierto = False
+    for i in range(len(palabra)):
+        if palabra[i] == letra:
+            oculta[i] = letra
+            acierto = True
+    if not acierto:
+        print("Incorrecto")
+print("Ganaste")
+
+# i
+import random
+import time
+arreglo = [random.randint(1, 9) for _ in range(5)]
+print(arreglo)
+time.sleep(3)
+print("\n" * 50)
+respuesta = list(map(int, input().split()))
+if respuesta == arreglo:
+    print("Ganaste")
+else:
+    print("Perdiste")
+
+# j
+import random
+palabras = ["gato", "mesa", "silla"]
+palabra = random.choice(palabras)
+mostrar = ["_" for _ in palabra]
+mostrar[0] = palabra[0]
+while "_" in mostrar:
+    print(" ".join(mostrar))
+    letra = input()
+    acierto = False
+    for i in range(1, len(palabra)):
+        if palabra[i] == letra:
+            mostrar[i] = letra
+            acierto = True
+    if not acierto:
+        print("Incorrecto")
+print("Ganaste")
