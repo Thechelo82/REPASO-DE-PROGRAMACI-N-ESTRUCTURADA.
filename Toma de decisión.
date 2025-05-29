@@ -1,0 +1,49 @@
+# a
+n = int(input())
+if n > 0:
+    print("Positivo")
+elif n < 0:
+    print("Negativo")
+else:
+    print("Cero")
+
+# b
+a = int(input())
+b = int(input())
+if a > b:
+    print(a)
+else:
+    print(b)
+
+# c
+edad = int(input())
+if edad >= 18:
+    print("Mayor de edad")
+else:
+    print("Menor de edad")
+
+# d
+letra = input().lower()
+if letra in "aeiou":
+    print("Vocal")
+else:
+    print("Consonante")
+
+# e
+dia = int(input())
+if dia == 1:
+    print("Lunes")
+elif dia == 2:
+    print("Martes")
+elif dia == 3:
+    print("Miércoles")
+elif dia == 4:
+    print("Jueves")
+elif dia == 5:
+    print("Viernes")
+elif dia == 6:
+    print("Sábado")
+elif dia == 7:
+    print("Domingo")
+else:
+    print("Número inválido")
