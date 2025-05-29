@@ -1,0 +1,54 @@
+# a
+import random
+secreto = random.randint(1, 100)
+n = int(input())
+while n != secreto:
+    if n < secreto:
+        print("Muy bajo")
+    else:
+        print("Muy alto")
+    n = int(input())
+print("¡Correcto!")
+
+# b
+texto = input()
+letra = input()
+contador = 0
+i = 0
+while i < len(texto):
+    if texto[i] == letra:
+        contador += 1
+    i += 1
+print(contador)
+
+# c
+suma = 0
+n = int(input())
+while n >= 0:
+    suma += n
+    n = int(input())
+print(suma)
+
+# d
+import random
+a = 0
+b = 0
+tiempo = 0
+while a < 100 and b < 100:
+    a += random.randint(1, 10)
+    b += random.randint(1, 10)
+    tiempo += 1
+if a >= 100 and b >= 100:
+    print("Empate")
+elif a >= 100:
+    print("Corredor A ganó en", tiempo, "segundos")
+else:
+    print("Corredor B ganó en", tiempo, "segundos")
+
+# e
+producto = 1
+n = int(input())
+while n >= 0:
+    producto *= n
+    n = int(input())
+print(producto)
